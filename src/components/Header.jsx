@@ -15,11 +15,15 @@ export default function Header() {
 
     const [isOpen, setOpen] = useState(false)
 
-    return (<Fragment>
+    return (
+        <>
+        
         {
             isOpen && <div className='absolute top-0 bottom-0 right-0 sm:w-1/2 bg-black/20 z-40'></div>
         }
-        <header className={`bg-black py-[10px] md:p-[15px] sticky top-0 z-30`}>
+
+        <header className={`py-[10px] md:p-[15px] fixed w-full top-0 z-30`}>
+        
             <div className='container flex justify-between max-w-full'>
                 <div className='md:hidden -mt-2 -mb-2 h-21 w-21'>
                     <Hamburger toggled={isOpen} toggle={setOpen} distance='sm' rounded color='#ffffff' />
@@ -40,7 +44,7 @@ export default function Header() {
                         <li className='transition duration-400 hover:text-primary p-[15px] md:p-0 border-b md:border-none'>Other&nbsp;Pages</li>
                         <li className='transition duration-400 hover:text-primary p-[15px] md:p-0 border-b md:border-none'>Shop</li>
                         <li className='transition duration-400 hover:text-primary p-[15px] md:p-0 border-b md:border-none'>Buy&nbsp;this&nbsp;template</li>
-                        <li className='border border-black bg-black text-white md:border-white p-[15px]  md:px-[8px] md:py-[5px] md:rounded-[3px] transition duration-400 ease-in-out md:hover:bg-primary md:hover:border-primary '>Reservations</li>
+                        <li className='border border-black bg-black md:bg-transparent text-white md:border-white p-[15px]  md:px-[8px] md:py-[5px] md:rounded-[3px] transition duration-400 ease-in-out md:hover:bg-primary md:hover:border-primary '>Reservations</li>
 
                     </ul>
 
@@ -55,7 +59,7 @@ export default function Header() {
 
 
         </header>
-    </Fragment>
 
+</>
     )
 }

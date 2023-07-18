@@ -8,5 +8,13 @@
   
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
+}
+
+li.slick-active div{
+  border-color: #978667; 
+}
+
+li.slick-active div div{
+  background-color: #978667;
 }
