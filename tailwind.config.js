@@ -7,26 +7,18 @@ module.exports = {
   ],
   
   theme: {
-    screens: {
-      'sm': '481px',
-      // => @media (min-width: 481px) { ... }
-  
-      'md': '991px',
-      
-  
-      'lg': '1024px',
-
-      'xl': '1280px',
-      
-
-      '2xl': '1536px',
-     
-    },
     extend: {
       colors: {
-        "primary": "#978667"
-      }
+        "primary": "#978667",
+        "header": "#222222",
+        "content": "#444444"
+      },
+      animation:{
+        slideRight: 'slideRight 0.3s ease-out',
+      },
+     
     },
+ 
   },
   plugins: [],
 }

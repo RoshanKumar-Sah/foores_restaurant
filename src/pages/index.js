@@ -2,89 +2,36 @@
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 import React from "react";
-import Slider from "react-slick";
-import SildeImage1 from "@/assets/slide_home_1.jpg"
-import SildeImage2 from "@/assets/slide_home_2.jpg"
-import SildeImage3 from "@/assets/slide_home_3.jpg"
-import DragIcon from "@/assets/drag_icon.svg"
+import Banner from '@/components/Banner';
+import Tile from '@/components/Tile';
+import AboutUs from '@/components/AboutUs';
 
-const poppins = Poppins({ subsets: ['latin'], weight: '500' })
+const poppins500 = Poppins({ subsets: ['latin'], weight: '500' })
+const poppins300 = Poppins({ subsets: ['latin'], weight: '300' })
 
 export default function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 1,
-    swipeToSlide: true,
-    arrows: false,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint:991,
-        settings: {
-          dots: false
-        }
-      }],
-    appendDots: dots => (
-      <div
-        style={{
-          
-          
-          margin : "50px 0px",
-         
-        }}
-      >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
-      </div>
-    ),
-    customPaging: i => (
-      <div className='border-2 border-white hover:border-primary rounded-full h-fit w-fit p-1 flex justify-center items-center'>
-       <div className='h-2 w-2 bg-transparent border border-transparent rounded-full'>
 
-        </div>
-      </div>
-    ),
-  
- 
-  }
 
   return (
     <main>
-    <section className='relative'>
-    <div className='md:hidden absolute bottom-8 right-8 z-30'>
-      <Image src={DragIcon} alt='dragIcon' className='brightness-75' />
-    </div>
 
-     <Slider {...settings}>
-          <div className='relative'>
-          <div className={`absolute z-10 top-1/3 right-4 md:right-36 ${poppins.className} flex flex-col items-end`}>
-          <h2 className='text-white font-black text-[2.875rem] uppercase text-right leading-none mb-2'>Taste<br />Unique Food</h2>
-          <p className='text-white font-normal text-[21px] leading-9 mb-5'>Cooking delicious food since 2005</p>
-          <p className='text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium' >Read&nbsp;More</p>
-          </div>
-            <Image src={SildeImage1} alt='slideImage' className='brightness-50 h-[660px] object-cover' />
-          </div>
+      <Banner />
+      <Tile />
+      <AboutUs />
 
-          <div className='relative'>
-          <div className={`absolute z-10 top-1/3 left-4 md:left-28 ${poppins.className} flex flex-col items-start`}>
-          <h2 className='text-white font-black text-[2.875rem] uppercase  leading-none mb-2'>Reserve<br />A&nbsp;Table&nbsp;Now</h2>
-          <p className='text-white font-normal text-[21px] leading-9 mb-5'>Cooking delicious food since 2005</p>
-          <p className='text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium' >Read&nbsp;More</p>
+      <section className='bg-[#F4F4F4]'>
+        <div className='mx-[140px] py-[120px] px-3'>
+          <div className='flex flex-col justify-center items-center'>
+            <div className='w-[120px] h-[2px] bg-[#e1e1e1] rounded-md box-border flex justify-center'>
+              <div className='w-[60px] h-[2px] bg-primary  rounded-md'>
+              </div>
+            </div>
+            <h2 className={`mt-5`}>Our Daily Menu</h2>
           </div>
-            <Image src={SildeImage2} alt='slideImage' className='brightness-50 h-[660px] object-cover' />
-          </div>
+        </div>
+      </section>
 
-          <div className='relative'>
-          <div className={`absolute z-10 top-1/3 left-0 ${poppins.className} flex flex-col items-center w-full`}>
-          <h2 className='text-white font-black text-[2.875rem] uppercase text-center  leading-none mb-2'>Enjoy<br />A&nbsp;Friends&nbsp;Dinner</h2>
-          <p className='text-white font-normal text-[21px] leading-9 mb-5'>Cooking delicious food since 2005</p>
-          <p className='text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium' >Read&nbsp;More</p>
-          </div>
-            <Image src={SildeImage3} alt='slideImage' className='brightness-50 h-[660px] object-cover' />
-          </div>
-          </Slider>
-          </section>
+
     </main>
   )
 }
