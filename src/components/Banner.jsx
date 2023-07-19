@@ -57,7 +57,7 @@ export default function Banner() {
 
             <Slider {...settings}>
                 <div className='relative'>
-                    <div className={`absolute z-10 top-1/3 right-4 md:right-36 ${poppins.className} flex flex-col items-end`}>
+                    <div className={`absolute z-10 top-1/3 right-4 lg:right-36 ${poppins.className} flex flex-col items-end`}>
                         <h2 className='text-white font-black text-[2.875rem] uppercase text-right leading-none mb-2'>Taste<br />Unique Food</h2>
                         <p className='text-white font-normal text-[21px] leading-9 mb-5'>Cooking delicious food since 2005</p>
                         <p className='text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium cursor-pointer hover:brightness-[115%]' >Read&nbsp;More</p>
@@ -66,7 +66,7 @@ export default function Banner() {
                 </div>
 
                 <div className='relative'>
-                    <div className={`absolute z-10 top-1/3 left-4 md:left-28 ${poppins.className} flex flex-col items-start`}>
+                    <div className={`absolute z-10 top-1/3 left-4 lg:left-28 ${poppins.className} flex flex-col items-start`}>
                         <h2 className='text-white font-black text-[2.875rem] uppercase  leading-none mb-2'>Reserve<br />A&nbsp;Table&nbsp;Now</h2>
                         <p className='text-white font-normal text-[21px] leading-9 mb-5'>Cooking delicious food since 2005</p>
                         <p className='text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium cursor-pointer hover:brightness-[115%]' >Read&nbsp;More</p>
