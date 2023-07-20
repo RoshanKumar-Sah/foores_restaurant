@@ -5,20 +5,27 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  
+
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '991px',
+      xl: '1280px'
+
+    },
     extend: {
       colors: {
         "primary": "#978667",
         "header": "#222222",
         "content": "#444444"
       },
-      animation:{
+      animation: {
         slideRight: 'slideRight 0.3s ease-out',
       },
-     
+
     },
- 
+
   },
   plugins: [],
 }

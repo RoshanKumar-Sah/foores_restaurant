@@ -19,6 +19,18 @@ li.slick-active div div{
   background-color: #978667;
 }
 
+.react-calendar{
+  min-width: 100%;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr{
+text-decoration: none;
+}
+
+.react-calendar__month-view__days__day--weekend abbr{
+color: black;
+}
+
 @keyframes slideRight{
   0%{
       transform: translateX(-100%);

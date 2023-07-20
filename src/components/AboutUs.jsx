@@ -11,8 +11,8 @@ const poppins300 = Poppins({ subsets: ['latin'], weight: '300' })
 
 export default function AboutUs() {
     return (
-        <section className={`relative ${poppins500.className} bg-white`}>
-            <div className='w-full absolute md:block hidden'>
+        <section className={`relative h-[590px] lg:h-[610px]  ${poppins500.className} bg-white`}>
+            <div className='w-full  absolute md:block hidden'>
                 <Image src={PatternImage} alt='patterimage' className='object-cover h-[590px] lg:h-[610px] ' />
             </div>
 

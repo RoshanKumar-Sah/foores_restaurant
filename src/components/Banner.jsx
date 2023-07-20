@@ -21,7 +21,7 @@ export default function Banner() {
         initialSlide: 0,
         responsive: [
             {
-                breakpoint: 991,
+                breakpoint: 768,
                 settings: {
                     dots: false
                 }
@@ -51,7 +51,7 @@ export default function Banner() {
 
     return (
         <section className='relative h-[480px] md:h-[660px]'>
-            <div className='md:hidden absolute bottom-8 right-8 z-30'>
+            <div className='md:hidden absolute bottom-8 right-8 z-20'>
                 <Image src={DragIcon} alt='dragIcon' className='brightness-75' />
             </div>
 
@@ -62,7 +62,7 @@ export default function Banner() {
                         <p className='text-white font-normal text-[21px] leading-9 mb-5'>Cooking delicious food since 2005</p>
                         <p className='text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium cursor-pointer hover:brightness-[115%]' >Read&nbsp;More</p>
                     </div>
-                    <Image src={SildeImage1} alt='slideImage' className='brightness-50 h-[480px] md:h-[660px] object-cover' />
+                    <Image src={SildeImage1} alt='slideImage' className='brightness-50 w-full h-[480px] md:h-[660px] object-cover' />
                 </div>
 
                 <div className='relative'>
@@ -71,7 +71,7 @@ export default function Banner() {
                         <p className='text-white font-normal text-[21px] leading-9 mb-5'>Cooking delicious food since 2005</p>
                         <p className='text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium cursor-pointer hover:brightness-[115%]' >Read&nbsp;More</p>
                     </div>
-                    <Image src={SildeImage2} alt='slideImage' className='brightness-50 h-[480px] md:h-[660px] object-cover' />
+                    <Image src={SildeImage2} alt='slideImage' className='brightness-50 w-full  h-[480px] md:h-[660px] object-cover' />
                 </div>
 
                 <div className='relative'>
@@ -80,7 +80,7 @@ export default function Banner() {
                         <p className='text-white font-normal text-[21px] leading-9 mb-5'>Cooking delicious food since 2005</p>
                         <p className='text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium cursor-pointer hover:brightness-[115%]' >Read&nbsp;More</p>
                     </div>
-                    <Image src={SildeImage3} alt='slideImage' className='brightness-50 h-[480px] md:h-[660px] object-cover' />
+                    <Image src={SildeImage3} alt='slideImage' className='brightness-50 w-full  h-[480px] md:h-[660px] object-cover' />
                 </div>
             </Slider>
         </section>
