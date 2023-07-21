@@ -29,7 +29,7 @@ export default function DailyMenu() {
 
                 <div className='relative min-h-[350px]'>
                     <div className='h-[350px] absolute w-full'>
-                        <Image src={MenuBg} className='h-full w-full object-cover rounded-[5px] brightness-50' />
+                        <Image src={MenuBg} alt='menuBackground' className='h-full w-full object-cover rounded-[5px] brightness-50' />
                     </div>
 
                     <div className='relative text-white p-[60px] flex justify-between items-center'>
@@ -41,7 +41,7 @@ export default function DailyMenu() {
                         </div>
 
                         <div className='hidden lg:block'>
-                            <Image src={OfferDetails} />
+                            <Image src={OfferDetails} alt='offer' />
                         </div>
                     </div>
                 </div>
