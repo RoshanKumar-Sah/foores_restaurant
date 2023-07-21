@@ -15,6 +15,10 @@ module.exports = {
 
     },
     extend: {
+      backgroundImage: {
+        "frame-footer": "url('../assets/frame_footer.png')",
+        "contact": "url('../assets/bg_call_section.jpg')"
+      },
       colors: {
         "primary": "#978667",
         "header": "#222222",
