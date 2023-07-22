@@ -18,7 +18,7 @@ const lora = Lora({ subsets: ['latin'], weight: '400' })
 export default function DailyMenu() {
     return (
         <section className='bg-[#F4F4F4]'>
-            <div className=' xl:mx-[140px] py-[120px] px-3'>
+            <div className=' xl:mx-[140px] pt-[120px] pb-[100px] px-3'>
                 <div className='mb-12 flex flex-col justify-center items-center'>
                     <div className='w-[120px] h-[2px] bg-[#e1e1e1] rounded-md box-border flex justify-center'>
                         <div className='w-[60px] h-[2px] bg-primary  rounded-md'>

@@ -11,16 +11,13 @@ const poppins300 = Poppins({ subsets: ['latin'], weight: '300' })
 
 export default function AboutUs() {
     return (
-        <section className={`relative h-[590px] lg:h-[610px]  ${poppins500.className} bg-white`}>
-            <div className='w-full  absolute md:block hidden'>
-                <Image src={PatternImage} alt='patterimage' className='object-cover h-[590px] lg:h-[610px] ' />
-            </div>
+        <section className={`relative h-fit  ${poppins500.className} bg-white md:bg-pattern bg-cover`}>
 
             <div className='relative gap-10 flex justify-center pt-[60px] pb-[40px] lg:pt-[120px] lg:pb-[100px]'>
 
                 <div className='mx-3 w-1/2 relative hidden lg:flex justify-end '>
                     <Image src={HomeImage} alt='homeimage' />
-                    <div className='absolute bottom-8 right-8 h-[45px] w-[45px] bg-white flex justify-center items-center rounded-full'>
+                    <div className='absolute bottom-8 right-8 h-[45px] w-[45px] bg-white flex justify-center items-center rounded-full cursor-pointer'>
                         <BsFillPlayFill size={21} color='#978667' />
                     </div>
                 </div>

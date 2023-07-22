@@ -9,14 +9,10 @@ import DailyMenu from '@/components/DailyMenu';
 import ContactUs from '@/components/ContactUs';
 import Reserve from '@/components/Reserve';
 
-import {BiMap} from "react-icons/bi"
-import {AiFillTag} from "react-icons/ai"
-import {CiClock2} from "react-icons/ci"
-import {MdOutlineNavigateNext} from "react-icons/md"
-import TwitterIcon from "@/assets/twitter_icon.svg"
-import FacebookIcon from "@/assets/facebook_icon.svg"
-import InstagramIcon from "@/assets/instagram_icon.svg"
-import YoutubeIcon from "@/assets/youtube_icon.svg"
+import {MdOutlineKeyboardArrowUp} from "react-icons/md"
+import * as Scroll from 'react-scroll';
+import { animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 
 
@@ -25,7 +21,12 @@ const poppins300 = Poppins({ subsets: ['latin'], weight: '300' })
 const lora = Lora({ subsets: ['latin'], weight: '400' })
 
 export default function Home() {
+  
+// let scroll = Scroll.animateScroll;
 
+// function scrollToTop() {
+//   scroll.scrollToTop({smooth:true, duration: 1000, delay:500});
+// }
   
   return (
     <main className='bg-contact bg-fixed'>
@@ -39,6 +40,11 @@ export default function Home() {
       <ContactUs />
       <Reserve />
 
+{/* <section className='fixed right-4 bottom-4 z-0 cursor-pointer'  onClick={scrollToTop}>
+  <div className='bg-black/50 hover:bg-primary rounded-full p-1'>
+<MdOutlineKeyboardArrowUp size={36} color='white' />
+  </div>
+</section> */}
 
 
       
