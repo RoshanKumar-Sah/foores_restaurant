@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md"
 import * as Scroll from 'react-scroll';
-import { animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default function ScrollToTop() {
 

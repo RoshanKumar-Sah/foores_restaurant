@@ -10,45 +10,53 @@ import CoconutTart from "@/assets/coconut_tart.jpg"
 import CoookiesCreamCheese from "@/assets/cookies_cream_cheese.jpg"
 import ChocolateCupcakes2 from "@/assets/chocolate_cupcakes_2.jpg"
 import SoftShellCrab2 from "@/assets/soft_shell_crab_2.jpg"
-
+import { useRef } from 'react'
+import useOnScreen from '@/hooks/useOnScreen'
 
 const poppins500 = Poppins({ subsets: ['latin'], weight: '500' })
 const lora = Lora({ subsets: ['latin'], weight: '400' })
 
 export default function DailyMenu() {
+
+    const ref = useRef();
+    const isOnScreen = useOnScreen(ref);
+
     return (
         <section className='bg-[#F4F4F4]'>
-            <div className=' xl:mx-[140px] pt-[120px] pb-[100px] px-3'>
-                <div className='mb-12 flex flex-col justify-center items-center'>
-                    <div className='w-[120px] h-[2px] bg-[#e1e1e1] rounded-md box-border flex justify-center'>
-                        <div className='w-[60px] h-[2px] bg-primary  rounded-md'>
+            <div ref={ref} className=' xl:mx-[140px] pt-[120px] pb-[100px] px-3'>
+                <div className={`${isOnScreen ? "animate__animated animate__delay-0.9s animate-cUp" : " "}`}>
+                    <div className={`mb-12 flex flex-col justify-center items-center`}>
+                        <div className='w-[120px] h-[2px] bg-[#e1e1e1] rounded-md box-border flex justify-center'>
+                            <div className='w-[60px] h-[2px] bg-primary  rounded-md'>
+                            </div>
+                        </div>
+                        <h2 className={`mt-5 text-[2.125rem] ${poppins500.className}`}>Our Daily Menu</h2>
+                    </div>
+
+                    <div className={`relative min-h-[350px]`}>
+                        <div className='h-[350px] absolute w-full'>
+                            <Image src={MenuBg} alt='menuBackground' className='h-full w-full object-cover rounded-[5px] brightness-50' />
+                        </div>
+
+                        <div className='relative text-white p-[60px] flex justify-between items-center'>
+                            <div className={`${poppins500.className}`}>
+                                <small className='uppercase text-sm'>Special Offer</small>
+                                <h3 className='text-4xl leading-tight'>Burgher Menu $18 only</h3>
+                                <p className={`mb-5 ${lora.className}`}>Hamburgher, Chips, Mix Sausages, Beer, Muffin</p>
+                                <p className='py-2 px-[25px] text-sm bg-primary rounded-sm w-fit cursor-pointer hover:brightness-[115%]'>Reserve&nbsp;now</p>
+                            </div>
+
+                            <div className='hidden lg:block'>
+                                <Image src={OfferDetails} alt='offer' />
+                            </div>
                         </div>
                     </div>
-                    <h2 className={`mt-5 text-[2.125rem] ${poppins500.className}`}>Our Daily Menu</h2>
                 </div>
 
-                <div className='relative min-h-[350px]'>
-                    <div className='h-[350px] absolute w-full'>
-                        <Image src={MenuBg} alt='menuBackground' className='h-full w-full object-cover rounded-[5px] brightness-50' />
-                    </div>
-
-                    <div className='relative text-white p-[60px] flex justify-between items-center'>
-                        <div className={`${poppins500.className}`}>
-                            <small className='uppercase text-sm'>Special Offer</small>
-                            <h3 className='text-4xl leading-tight'>Burgher Menu $18 only</h3>
-                            <p className={`mb-5 ${lora.className}`}>Hamburgher, Chips, Mix Sausages, Beer, Muffin</p>
-                            <p className='py-2 px-[25px] text-sm bg-primary rounded-sm w-fit cursor-pointer hover:brightness-[115%]'>Reserve&nbsp;now</p>
-                        </div>
-
-                        <div className='hidden lg:block'>
-                            <Image src={OfferDetails} alt='offer' />
-                        </div>
-                    </div>
-                </div>
-
-                <div className='mt-[80px] mb-[25px] flex flex-col lg:flex-row'>
+                <div ref={ref} className='mt-[80px] mb-[25px] flex flex-col lg:flex-row'>
                     <ul className='w-full lg:w-1/2 px-3'>
-                        <li className='flex w-full items-center mb-[30px]'>
+
+                        <li className={`flex w-full items-center mb-[30px] ${isOnScreen ? "animate__animated animate__delay-1s animate-cUp" : " "}`}>
                             <div className='min-w-[80px] cursor-pointer'>
                                 <Image src={SummerBerry} alt='menuImage' className=' max-w-[80px] rounded-full  object-cover' />
                             </div>
@@ -62,7 +70,7 @@ export default function DailyMenu() {
                             </div>
                         </li>
 
-                        <li className='flex w-full items-center mb-[30px]'>
+                        <li className={`flex w-full items-center mb-[30px] ${isOnScreen ? "animate__animated animate__delay-1s animate-cUp" : " "} `}>
                             <div className='min-w-[80px] cursor-pointer'>
                                 <Image src={PumpkinCookies} alt='menuImage' className=' max-w-[80px] rounded-full  object-cover' />
                             </div>
@@ -76,7 +84,7 @@ export default function DailyMenu() {
                             </div>
                         </li>
 
-                        <li className='flex w-full items-center mb-[30px]'>
+                        <li className={`flex w-full items-center mb-[30px] ${isOnScreen ? "animate__animated animate__delay-1s animate-cUp" : " "}`}>
                             <div className='min-w-[80px] cursor-pointer'>
                                 <Image src={ChocolateCupcakes} alt='menuImage' className=' max-w-[80px] rounded-full  object-cover' />
                             </div>
@@ -90,7 +98,7 @@ export default function DailyMenu() {
                             </div>
                         </li>
 
-                        <li className='flex w-full items-center mb-[30px]'>
+                        <li className={`flex w-full items-center mb-[30px] ${isOnScreen ? "animate__animated animate__delay-1s animate-cUp" : " "}`}>
                             <div className='min-w-[80px] cursor-pointer'>
                                 <Image src={SoftShellCrab} alt='menuImage' className=' max-w-[80px] rounded-full  object-cover' />
                             </div>
@@ -106,8 +114,8 @@ export default function DailyMenu() {
                     </ul>
 
 
-                    <ul className='w-full lg:w-1/2 px-3'>
-                        <li className='flex w-full items-center mb-[30px]'>
+                    <ul ref={ref} className='w-full lg:w-1/2 px-3'>
+                        <li className={`flex w-full items-center mb-[30px] ${isOnScreen ? "animate__animated animate__delay-1s animate-cUp" : " "}`}>
                             <div className='min-w-[80px] cursor-pointer'>
                                 <Image src={CoconutTart} alt='menuImage' className=' max-w-[80px] rounded-full  object-cover' />
                             </div>
@@ -121,7 +129,7 @@ export default function DailyMenu() {
                             </div>
                         </li>
 
-                        <li className='flex w-full items-center mb-[30px]'>
+                        <li className={`flex w-full items-center mb-[30px] ${isOnScreen ? "animate__animated animate__delay-1s animate-cUp" : " "}`}>
                             <div className='min-w-[80px] cursor-pointer'>
                                 <Image src={CoookiesCreamCheese} alt='menuImage' className=' max-w-[80px] rounded-full  object-cover' />
                             </div>
@@ -135,7 +143,7 @@ export default function DailyMenu() {
                             </div>
                         </li>
 
-                        <li className='flex w-full items-center mb-[30px]'>
+                        <li className={`flex w-full items-center mb-[30px] ${isOnScreen ? "animate__animated animate__delay-1s animate-cUp" : " "}`}>
                             <div className='min-w-[80px] cursor-pointer'>
                                 <Image src={ChocolateCupcakes2} alt='menuImage' className=' max-w-[80px] rounded-full  object-cover' />
                             </div>
@@ -149,7 +157,7 @@ export default function DailyMenu() {
                             </div>
                         </li>
 
-                        <li className='flex w-full items-center mb-[30px]'>
+                        <li className={`flex w-full items-center mb-[30px] ${isOnScreen ? "animate__animated animate__delay-1s animate-cUp" : " "}`}>
                             <div className='min-w-[80px] cursor-pointer'>
                                 <Image src={SoftShellCrab2} alt='menuImage' className=' max-w-[80px] rounded-full  object-cover' />
                             </div>
@@ -166,8 +174,8 @@ export default function DailyMenu() {
 
                 </div>
 
-                <div className='flex justify-center'>
-                    <p className={`border-2 px-[15px] py-[6px] text-[#111111] text-sm rounded-[3px] border-[#111111] ${poppins500.className} hover:text-primary hover:border-primary cursor-pointer`}>Download Menu</p>
+                <div ref={ref} className='flex justify-center'>
+                    <p className={`border-2 px-[15px] py-[6px] text-[#111111] text-sm rounded-[3px] border-[#111111] ${poppins500.className} hover:text-primary hover:border-primary cursor-pointer animate__animated animate__delay-1s animate__zoomIn`}>Download Menu</p>
                 </div>
 
             </div>

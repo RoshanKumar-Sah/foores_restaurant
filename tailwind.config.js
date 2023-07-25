@@ -27,7 +27,12 @@ module.exports = {
       },
       animation: {
         slideRight: 'slideRight 0.3s ease-out',
+        cRight: 'cRight',
+        cUp: 'cUp'
+
       },
+
+
 
     },
 
