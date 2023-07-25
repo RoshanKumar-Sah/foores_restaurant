@@ -69,14 +69,14 @@ export default function Banner() {
                 <div className='relative'>
                     <div className={`absolute z-10 top-1/3 right-4 lg:right-36 ${poppins.className} flex flex-col items-end`}>
                         <h2 className={`text-white font-black text-[2.875rem] uppercase text-right leading-none mb-2  ${currentSlide === 0 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`}>Taste<br />Unique Food</h2>
-                        <p className={`text-white font-normal text-[21px] leading-9 mb-5 ${currentSlide === 0 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`}>Cooking delicious food since 2005</p>
+                        <p className={`text-white text-right font-normal text-[21px] leading-9 mb-5 ${currentSlide === 0 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`}>Cooking delicious food since 2005</p>
                         <p className={`text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium cursor-pointer hover:brightness-[115%] ${currentSlide === 0 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`} >Read&nbsp;More</p>
                     </div>
                     <Image src={SildeImage1} alt='slideImage' className='brightness-50 w-full h-[480px] md:h-[660px] object-cover' />
                 </div>
 
                 <div className='relative'>
-                    <div className={`absolute z-10 top-1/3 left-4 lg:left-28 ${poppins.className} flex flex-col items-start`}>
+                    <div className={`absolute z-10 top-1/3 left-4 lg:left-28  ${poppins.className} flex flex-col items-start`}>
                         <h2 className={`text-white font-black text-[2.875rem] uppercase  leading-none mb-2 ${currentSlide === 1 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`}>Reserve<br />A&nbsp;Table&nbsp;Now</h2>
                         <p className={`text-white font-normal text-[21px] leading-9 mb-5 ${currentSlide === 1 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`}>Cooking delicious food since 2005</p>
                         <p className={`text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium cursor-pointer hover:brightness-[115%] ${currentSlide === 1 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`}>Read&nbsp;More</p>
@@ -85,9 +85,9 @@ export default function Banner() {
                 </div>
 
                 <div className='relative'>
-                    <div className={`absolute z-10 top-1/3 left-0 ${poppins.className} flex flex-col items-center w-full`}>
-                        <h2 className={`text-white font-black text-[2.875rem] uppercase text-center  leading-none mb-2 ${currentSlide === 2 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`}>Enjoy<br />A&nbsp;Friends&nbsp;Dinner</h2>
-                        <p className={`text-white font-normal text-[21px] leading-9 mb-5 ${currentSlide === 2 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`}>Cooking delicious food since 2005</p>
+                    <div className={`absolute z-10 top-1/3 left-0 ${poppins.className}  flex flex-col items-center w-full`}>
+                        <h2 className={`text-white font-black text-[2.875rem] uppercase text-center  leading-none mb-2 ${currentSlide === 2 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`}>Enjoy<br />A Friends Dinner</h2>
+                        <p className={`text-white font-normal text-center text-[21px] leading-9 mb-5 ${currentSlide === 2 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`}>Cooking delicious food since 2005</p>
                         <p className={`text-white text-right py-2 px-[25px] bg-primary w-fit border border-transparent rounded-sm text-sm font-medium cursor-pointer hover:brightness-[115%] ${currentSlide === 2 ? 'animate__animated  animate__delay-0.9s animate-cRight' : ''}`} >Read&nbsp;More</p>
                     </div>
                     <Image src={SildeImage3} alt='slideImage' className='brightness-50 w-full  h-[480px] md:h-[660px] object-cover' />
